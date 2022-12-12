@@ -1,10 +1,16 @@
+# indicating which version of Docker-compose we wish to use
 version: '3'
 
+# we will be creating these services
 services:
   flask_app:
+    # naming our resulting container
     container_name: Projects
     restart: always
+    # Note that we are building from our current terminal directory where our Dockerfile is located, we use .
     build: ./FlaskApp
+    # publishing a port so that external services requesting port 8000 on your local machine
+    # are mapped to port 8000 on our container
     ports:
       - "8000:8000"
     command: gunicorn -w 1 -b 0.0.0.0:8000 wsgi:app
@@ -12,6 +18,7 @@ services:
   nginx:
     container_name: nginx
     restart: always
+    # Since our Dockerfile for web-server is located in react-app foler, our build context is ./react-app
     build: ./nginx
     ports:
       - "80:80"
