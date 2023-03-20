@@ -4,9 +4,14 @@ app = Flask(__name__)
 app.config["IMAGE_UPLOADS"] = "/home/junaid/Projects/DevOps/Flask-App/FlaskApp/media"
 
 
-@app.route("/")
+@app.route("/home")
 def home():
    return render_template('index.html')
+
+
+@app.route("/")
+def visit_home():
+   return "Visit /home for home page"
 
 
 # Route to upload image
