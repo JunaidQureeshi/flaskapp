@@ -50,4 +50,4 @@ jobs:
           context: .
           push: true
           tags: junaidqureeshi/flaskapp:latest
-        #  
+        
