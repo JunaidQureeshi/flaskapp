@@ -12,7 +12,7 @@ COPY services/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY services/web .
+COPY services .
 
 # Expose port and run application
 EXPOSE 5000
