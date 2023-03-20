@@ -1,2 +1,5 @@
-flask
-gunicorn
+Flask==2.2.2
+gunicorn==20.1.0
+docker==5.0.3
+docker-compose==1.29.2
+pytest==7.2.2
