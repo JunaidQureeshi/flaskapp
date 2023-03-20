@@ -1,10 +1,8 @@
 name: ci
-
 on:
   push:
     branches:
       - 'Develop'
-
 jobs:
   unit-test:
     runs-on: ubuntu-latest
@@ -19,11 +17,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./services/web/requirements.txt        
+          pip install -r ./services/web/requirements.txt
       - name: Run pytest
-        run: | 
+        run: |
           pytest
-
   docker:
     runs-on: ubuntu-latest
     steps:
@@ -48,4 +45,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: junaidqureeshi/flaskapp:latest        
+          tags: junaidqureeshi/flaskapp:latest
