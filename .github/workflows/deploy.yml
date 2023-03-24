@@ -11,10 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Set up Python Environment
+      uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
     - name: Build the docker_compose
       run: docker-compose up -d --build
     - name: Buid the application
-      run: docker-compose exec -t flask-on-docker-web npm run build
+      run: docker-compose exec -t Flask-App npm run build
 
   Deploy:
     needs: build
