@@ -1,5 +1,4 @@
 name: docker
-
 on:
   pull_request:
     branches:
@@ -14,7 +13,7 @@ jobs:
     - name: Set up Python Environment
       uses: actions/setup-python@v4
       with:
-          python-version: '3.7'
+          python-version: '3.8'
     - name: Build the docker_compose
       run: docker-compose up -d --build
     - name: Buid the application
@@ -36,7 +35,7 @@ jobs:
           
             #Now we have got the access of EC2 and we will start the deploy .
 
-            cd /home/junaid/Projects/DevOps &&
+            cd /home/junaid/Projects/DevOps/Flask-App &&
             git checkout ${{ secrets.BRANCH_NAME }} &&
             git fetch --all &&
             git reset --hard origin/${{ secrets.BRANCH_NAME }} &&
