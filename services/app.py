@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, render_template
 app = Flask(__name__)
-app.config["IMAGE_UPLOADS"] = "/home/junaid/Projects/DevOps/Flask-App/FlaskApp/media"
+app.config["IMAGE_UPLOADS"] = "/home/junaid/Projects/DevOps/Flask-App/services/media"
 
 
 @app.route("/home")
