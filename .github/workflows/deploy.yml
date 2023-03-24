@@ -37,4 +37,4 @@ jobs:
             git fetch --all &&
             git reset --hard origin/${{ secrets.BRANCH_NAME }} &&
             git pull origin ${{ secrets.BRANCH_NAME }} &&
-            sudo docker compose -f docker-compose.yml up -d --build 
+            sudo docker compose up -d --build 
