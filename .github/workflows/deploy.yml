@@ -38,7 +38,7 @@ jobs:
           
             #Now we have got the access of EC2 and we will start the deploy .
 
-            cd /home/ubuntu/Projects/DevOps/flaskapp &&
+            cd /home/ubuntu/flaskapp &&
             git checkout ${{ secrets.BRANCH_NAME }} &&
             git fetch --all &&
             git reset --hard origin/${{ secrets.BRANCH_NAME }} &&
