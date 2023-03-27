@@ -16,4 +16,4 @@ COPY services .
 
 # Expose port and run application
 EXPOSE 5000
-CMD ["python", "manage.py", "run", "-h", "0.0.0.0", "-p", "5000"]
+CMD ["python", "app.py", "run", "-h", "0.0.0.0", "-p", "5000"]
