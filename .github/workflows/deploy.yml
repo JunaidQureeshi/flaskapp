@@ -1,4 +1,5 @@
 name: docker
+
 on:
   pull_request:
     branches:
@@ -8,8 +9,10 @@ jobs:
 #First we will see the application build or not , then we will deploy in EC2
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: Set up Python Environment
       uses: actions/setup-python@v4
       with:
