@@ -26,7 +26,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
       - name: Deploy in EC2
         env:
             PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
@@ -36,7 +36,7 @@ jobs:
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME}
           
-#Now we have got the access of EC2 and we will start the deploy .
+            #Now we have got the access of EC2 and we will start the deploy .
 
             cd /home/ubuntu/flaskapp/ &&
             git checkout ${{ secrets.BRANCH_NAME }} &&
