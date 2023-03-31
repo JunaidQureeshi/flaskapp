@@ -38,7 +38,7 @@ jobs:
           
             #Now we have got the access of EC2 and we will start the deploy .
 
-            ls
+            pwd
             # mkdir /home/ubuntu/projects &&
             # cd /home/ubuntu/flaskapp &&
             # git checkout ${{ secrets.BRANCH_NAME }} &&
