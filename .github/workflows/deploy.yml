@@ -19,7 +19,7 @@ jobs:
           python-version: '3.8'
     - name: Build the docker_compose
       run: docker-compose up -d --build
-    - name: Buid the application
+    - name: Build the application
       run: docker-compose exec -t Flask-App npm run build
 
   Deploy:
